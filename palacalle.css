@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+.logo1 {
+    width: 50%;
+    margin-left: 30%;
+}
+
+#palacalle {
+    width: 30%;
+    height: 30%;
+}
+
+
+body {
+    background-color: rgb(251, 227, 197);
+}
+
+label[for="abrir-cerrar"] {
+    position: fixed;
+    color: #fff;
+    top: 2vw;
+    filter: brightness(150%) hue-rotate(140deg);
+    transform: perspective(180deg);
+    transition: all .3s ease;
+    z-index: 3;
+}
+
+.desplegable {
+    display: flex;
+    filter: invert(100%);
+    width: 3vw;
+    transform: perspective(180deg);
+    transition: all .3s ease;
+    margin-top: 0%;
+}
+
+
+#menu_opciones {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1vw;
+}
+
+input#abrir-cerrar {
+    visibility: hidden;
+    transform: perspective(180deg);
+    transition: all .3s ease;
+}
+
+.fondo {
+    position: fixed;
+    background-color: black;
+    width: 8vw;
+    height: 100vh;
+    top: 0;
+    z-index: 10;
+}
+
+#sidebar {
+    margin-top: 1%;
+    width: 7vw;
+    z-index: 700;
+    transition: ease-in-out .4s;
+    overflow-y: auto;
+    /* Ajustar la altura al viewport */
+    overflow-y: scroll hidden;
+    cursor: grab;
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #00000000 #00000000;
+}
+
+/* WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #00000000;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #00000000;
+}
+
+input#abrir-cerrar:checked~#sidebar {
+    width: 500px;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    /* ancho de todo sidebar */
+}
+
+.sidebar {
+    position: fixed;
+    height: 250vh;
+    left: 0;
+    background-color: #000000;
+    overflow: hidden;
+    padding: 2px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    /* Habilitar el scroll vertical */
+    cursor: grab;
+    top: 7vw;
+}
+
+#menu_opciones {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#menu_opciones p {
+    margin: 0;
+    text-align: right;
+    /* Alinear el texto a la derecha */
+    margin-right: 10px;
+    /* Ajustar el margen derecho para separar el texto de la imagen */
+    order: 1;
+}
+
+#menu_opciones .opciones {
+    padding: 1px;
+    /* Ajustar el margen izquierdo para separar la imagen del texto */
+    order: 2;
+}
+
+
+.opciones {
+    margin: 10px;
+    margin: 14px;
+    width: 80px;
+    filter: invert(100);
+    transition: 1s;
+}
+
+
+#menu_opciones {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1.5vw;
+}
+
+#menu_opciones:active {
+    animation: vibrar .5s;
+    background-color: rgb(198, 53, 53);
+}
+
+
+@keyframes vibrar {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(50deg);
+    }
+
+    50% {
+        transform: rotate(-0deg);
+    }
+
+    75% {
+        transform: rotate(-50deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
+
+@media screen and (max-width:800px) {
+    .fondo {
+        width: 10vw;
+    }
+}
+
+.fondo2 {
+    height: 100%;
+}
+
+
+
+#sidebar {
+    width: 8vw;
+}
+
+.opciones {
+    width: 5.5vw;
+
+}
+
+#menu_opciones p {
+    font-size: 2.5vw;
+}
+
+@media screen and (max-width:770px) {
+    #menu_opciones p {
+        font-size: 4vw;
+    }
+
+    .fondo {
+
+        width: 9vw;
+    }
+
+
+    #sidebar {
+        width: 9vw;
+
+    }
+
+    .opciones {
+        width: 7vw;
+    }
+
+    .desplegable {
+        width: 6vw;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .fondo {
+
+        width: 16vw;
+    }
+
+    #sidebar {
+        width: 16vw;
+    }
+
+    .opciones {
+        width: 12vw;
+        margin: 4 8px;
+    }
+
+    #menu_opciones p {
+        font-size: 5vw;
+    }
+
+    input#abrir-cerrar:checked~#sidebar {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:420px) {
+
+    .fondo {
+
+        width: 19vw;
+    }
+
+
+    #sidebar {
+        width: 18vw;
+
+    }
+
+    .opciones {
+        width: 17vw;
+        margin: 10px 0;
+    }
+
+    #menu_opciones p {
+        font-size: 6vw;
+    }
+
+    input#abrir-cerrar:checked~#sidebar {
+        width: 50%;
+    }
+}
+
+/* Estilo del botón para abrir la ventana emergente */
+.abrir-ventana {
+    position: absolute;
+    right: 0px;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    border-radius: 5px;
+    justify-content: flex-end;
+    top: 70px;
+    z-index: 0;
+}
+
+#img-abrir {
+    position: fixed;
+    z-index: 0;
+    right: 15px;
+    top: 0px;
+    width: 50px;
+    background-color: rgba(229, 225, 225, 0.566);
+    border: 1px solid black;
+    top: 10px;
+
+}
+
+.ban-menu {
+    width: 50%;
+}
+
+/* Estilo de la ventana emergente */
+#miVentana:target {
+    position: fixed;
+    display: block;
+    width: 500px;
+    z-index: 3;
+    float: right;
+    right: 0;
+    margin-top: 0%;
+    background-color: rgb(229, 225, 225);
+    border: 2px solid rgb(63, 1, 1);
+    transition: ease-in-out .4s;
+    overflow-y: auto;
+    /* Ajustar la altura al viewport */
+    cursor: grab;
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #00000000 #00000000;
+}
+
+/* WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #00000000;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #00000000;
+}
+
+.fondo2 {
+    position: absolute;
+    width: 60%;
+    height: 125%;
+    margin-top: 0;
+    background-color: #00000000;
+}
+
+.ventana-emergente {
+    display: none;
+    position: fixed;
+    margin-right: 0px;
+    top: 0;
+    z-index: 150;
+}
+
+
+/* Estilo del botón para cerrar la ventana emergente */
+.cerrar-ventana {
+    position: absolute;
+    top: 10px;
+    right: 38px;
+}
+
+#img-cerrar {
+    position: absolute;
+    width: 40px;
+}
+
+.redes {
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+}
+
+.redes img {
+    margin-top: 50px;
+    width: 60px;
+    padding-bottom: 50px;
+}
+
+.contacto hr {
+    display: flex;
+    border: none;
+    border-top: 3px dotted rgb(0, 0, 0);
+    width: 90%;
+    padding: 10px 0;
+    margin-left: 20px;
+}
+
+.tex {
+    display: flex;
+    justify-content: right;
+    font-size: 28px;
+}
+
+.tex img {
+    display: flex;
+    width: 60px;
+    padding-left: 20px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    margin-bottom: 15PX;
+}

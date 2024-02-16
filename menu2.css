@@ -1,0 +1,117 @@
+#hamburguesa {
+    display: flex;
+    justify-content: center;
+}
+
+.imgn {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 20px;
+    margin-left: 10%;
+    margin-bottom: 4%;
+}
+
+.imgn1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 30px;
+    margin-left: 10%;
+    margin-bottom: 4%;
+}
+
+#imagen {
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+}
+
+.menu2 {
+    border: 1px;
+    color: black;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.886);
+    border-radius: 6px;
+    height: auto;
+}
+
+.menu1 {
+    border: 1px;
+    color: black;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.886);
+    border-radius: 6px;
+    height: auto;
+}
+
+.texto h3,
+h4 {
+    text-align: center;
+    letter-spacing: 3px;
+    margin-top: 6%;
+}
+
+.title {
+    margin: 5% 38%;
+}
+
+@media screen and (max-width:1000px) {
+    .imgn {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        gap: 30px;
+        margin-left: 25%;
+    }
+
+    .imgn1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        gap: 15px;
+        margin-left: 6%;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .imgn {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        gap: 60px;
+        margin-left: 45%;
+    }
+
+    .imgn1 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        gap: 20px;
+        margin-left: 60px;
+    }
+
+    .menu2 {
+        height: auto;
+        width: 110%;
+
+    }
+}
+
+@media screen and (max-width:604px) {
+    .menu2 {
+        width: 120%;
+    }
+
+    .imgn1 {
+        margin-left: 20%;
+    }
+}
+
+@media screen and (max-width:522px) {
+    .menu2 {
+        width: 170%;
+    }
+}
